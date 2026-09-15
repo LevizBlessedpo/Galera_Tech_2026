@@ -1,28 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Posicionamento relativo </title>
     <style>
+        body {
+            background-color: gold;
+        }
+        *{ margin: 0 auto;} /* centralizado na tela*/
         .container {
-            width: 100%;
+            width: 100%; /* Porcentagem é OBRIGATÓRIA para aumentar a responsividade do site */
             height: auto;
-            position: relative;
+            position: relative; /* position: relative é OBRIGATÓRIA para aumentar a responsivida do site */
             background-color: crimson;
+        }
+        /* Área de edição da div do JavaScript */
+        .div_a {
+            position: relative;
+            width: 50%;
+            height: 1000px;
+            background-color: gold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: justify;
+            width: 48%;
+            padding: 1%;
+            float: left; /* Serve para colocar os elementos 'flutuando', ou seja, escolhendo left o container div_a nesse caso se move para a esquerda, aumenta a responsividade */
+        }
+        .h1_citacao {
+            text-align: center;
+            top: 10;
+            text-shadow: 0px 5px 10px;
+            margin-top: 3%;
+            margin-bottom: 2%;
+        }
+        .p_citacao {
+            text-align: center;
+            top: 10;
+            text-shadow: 0px 5px 10px;
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }
+        .p_conclusao {
+            text-align: justify;
+        }
+        /* Área de edição da div do Typescript */
+        .div_b {
+            position: relative;
+            width: 48%;
+            height: 1000px;
+            background-color:blue;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: justify;
+            padding: 1%;
+            float: right; /* Mesma coisa do 'float: left;' mas nesse caso ele alinha na direita por causa do 'right'*/
+        }
+        .img_js, .img_typescript {
+            width: 50%;
+            position: relative;
+            margin: auto;
+            display: block;
+            border-radius: 20%;
+            box-shadow: 10px 0px 5px 5px;
+        }
+
+        .code_js, .code_type {
+            width: 500px;
+            margin: 10;
+            display: block;
+        }
+
+        /* nesse caso o @media permite os elementos específicados se ajustarem conforme a página e a largura da tela, aumenta a responsividade */
+        @media only screen and (max-width:800px) {
+            .div_a {
+                width: 100%;
+                background-color: yellow;
+                font-size: 10px;
+            }
+            .div_b {
+                width: 100%;
+            }
         }
     </style>
 </head>
-<body>
+<body> 
     <div class="container">
         <div class="div_a">
             <p>
-                A - Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime porro ratione sunt aliquid rerum? Aliquam neque magni nihil mollitia eveniet error labore pariatur, distinctio consectetur obcaecati odit? Veniam, in sint.
+                <p> <img src="img/js_image.png" class="img_js" alt="imagem do JavaScript"></p>
+                <h1 class="h1_citacao">⚡ O que o JavaScript tem de melhor?</h1>
+                <ol>
+                    <li>
+                        Mais rápido para começar: Não precisa de nenhuma configuração ou instalação especial para rodar.
+                    </li>
+                    <li>
+                        Curva de aprendizado menor: É mais simples de aprender se você é iniciante na programação
+                    </li>
+                    <li>
+                        Código mais livre: Você não precisa avisar ao programa se uma informação é um texto, um número ou uma lista.
+                    </li>
+                    <li>
+                        Menos arquivos: O código que você escreve é o mesmo que o navegador lê, sem precisar de conversão.
+                    </li>
+                </ol>
+                <p class="p_citacao">Exemplo de tela de código em JavaScript:</p>
+                <p>
+                    <img src="img/tela_javascript.png" width="500" class="code_js" alt="imagem da tela do código do JavaScript">
+                </p>
+                <p class="p_conclusao">
+                    A principal conclusão que podemos tirar é que JavaScript é a base de tudo: Ele continua sendo o coração da internet e a linguagem que os navegadores entendem. É a escolha perfeita para quem está começando, para criar protótipos rápidos ou para desenvolver sites menores e páginas interativas.
+                </p>
             </p>
         </div>
         <div class="div_b">
             <p>
-                B - Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime porro ratione sunt aliquid rerum? Aliquam neque magni nihil mollitia eveniet error labore pariatur, distinctio consectetur obcaecati odit? Veniam, in sint.
+                <p><img src="img/typescript_image.svg" class="img_typescript" alt="imagem do typescript"></p>
+                <h1 class="h1_citacao">🛡️ O que o TypeScript tem de melhor?</h1>
+                <ol>
+                    <li>
+                        Pega erros antes: Avisa que o código tem problemas enquanto você digita, antes mesmo de testar o sistema.
+                    </li>
+                    <li>
+                        Diz o que cada coisa é: Obriga você a definir os tipos de dados, o que evita que um texto quebre uma conta matemática, por exemplo.
+                    </li>
+                    <li>
+                        Organização para projetos grandes: Fica muito mais fácil mexer em códigos antigos ou trabalhar com muitas pessoas ao mesmo tempo.
+                    </li>
+                    <li>
+                        Ajuda do editor de código: O preenchimento automático (autocomplete) funciona muito melhor, economizando tempo de digitação.
+                    </li>
+                </ol>
+                <p class="p_citacao">
+                    Exemplo de tela de código em TypeScript:
+                </p>
+                <p>
+                    <img src="img/tela_typescript.png" width="500" class="code_type" alt="imagem do código do TypeScript">
+                </p>
+                <p class="p_conclusao">
+                    TypeScript é a evolução profissional: Ele não substitui o JavaScript, mas o protege. É a ferramenta indispensável para grandes empresas, sistemas complexos e equipes grandes que não podem se dar ao luxo de cometer erros bobos em produção.
+                </p>
             </p>
         </div>
     </div>
