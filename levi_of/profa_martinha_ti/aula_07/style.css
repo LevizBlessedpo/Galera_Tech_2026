@@ -1,0 +1,27 @@
+/* Edita o html de maneira geral "*" */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* O box sizzing zera todas as estruturas HTML para que eu mesmo possa edita-las a mão*/
+
+}
+body {
+    min-width: 100vh; /* vh expressa a altura vertical da tela */
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-align: center;
+    /* Define o gradiente linear da página com as cores definidas e uma direção especifíca com 150deg*/
+    background: linear-gradient(
+        150deg, 
+        #111111 45%,
+        #27394b 65%,
+        #92137d 100%
+    );
+}
+.perfil {
+    width: 360px;
+    max-width: 90%;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
