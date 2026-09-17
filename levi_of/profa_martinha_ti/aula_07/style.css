@@ -63,7 +63,6 @@ body {
     text-align: none;
     color: #fff;
     background-color: rgba(255, 255, 255, 0.08); /* 50% = 0.5, 80% = 0.8 */
-    background-color: #fff;
 }
 
 .links a:hover {
@@ -82,7 +81,7 @@ body {
     margin-top: 45px;
     font-size: 13px;
 }
-.social_links img {
-    width: 30px;
-    height: 30px;
+
+.devicon-github-original, .devicon-linkedin-plain {
+    font-size: 40px;
 }
