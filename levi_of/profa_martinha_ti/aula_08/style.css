@@ -1,24 +1,34 @@
+/* root determinamos as cores que serão usadas ao longo do código, quase como um "cérebro" de cores */
 :root {
     --cinza-topo: #dddddd;
     --azul: #80baf0;
     --vermelho: red;
+    --azul-escuro: #6f54e9;
+    --bege-cor: #fa8e8e;
+    --verde-claro: #57ec57;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+}
+
+.topo{
+    color: #ffffff;
+    text-shadow: 5px 5px 3px var(--vermelho);
+}
+
+.rodape{
+    background-image: url(img/matrix-code.gif);
+    color: #ffffff;
 }
 
 .topo{
     background-color: var(--cinza-topo);
     padding:15px;
     text-align: center;
-}
-
-.menuitem{
-    padding: 5px;
+    background-image: url(img/matrix-code.gif);
 }
 
 .menu{
@@ -27,25 +37,51 @@
     min-height: 350px;
 }
 
+.menuitem {
+    display: block;
+    border: red solid;
+    border-radius: 10px 20px 30px;
+    margin-top: 10px;
+    color: #ffffff;
+    text-shadow: 5px 5px 3px var(--vermelho);
+    padding: 5px;
+    background-image: url(img/matrix-code.gif);
+}
+
 .meio{
     float:left;
     width: 60%;
     min-height: 350px;
-    background-color: var(--vermelho);
+    background-color: #1a1a1a; /* Preto fosco / Grafite escuro */
+    border: #333333 solid 2px;
+    box-shadow: 5px 5px 5px #000000;
+    /* box-shadow: -5px -5px 15px #000000; */
 }
 
+.meio h2 {
+    margin-left: 200px;
+    color: var(--vermelho);
+}
+
+
 img {
-    width: 50%;
-    margin: 0 200px auto;
-    border-radius: 10px 20px 30px;
+    width: 100%;
+    height: 365px;
+    margin-right: 0;
     margin-top: 20px;
+    border-radius: 0 10px 20px;
 }
 
 .direita{
     float:right;
     width: 20%;
     min-height: 350px;
-    background-color: var(--azul);
+    background-color: #111111; /* Um tom de preto ligeiramente mais escuro */
+    border: #222222 solid 2px;
+}
+
+.meio, .direita {
+    color: #39ff14;
 }
 
 .rodape{
@@ -56,7 +92,21 @@ img {
     line-height: 50px;
     background-color: var(--cinza-topo);
 }
+body {
+  font-family: "roboto", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
 
+.ENIAC:hover{
+    color: var(--azul);
+}
+
+/*
+-------------------------------------------------
+Área para edição da responsividade do site
+-------------------------------------------------
+*/
 @media only screen and (max-width: 768px) {
     .menu {
         width: 20%;

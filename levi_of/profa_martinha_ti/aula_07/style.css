@@ -51,6 +51,7 @@ body {
     background-color: #29242e;
     color: #ffff;
     margin-bottom: 25px;
+    margin-top: 10px;
     cursor: pointer; /* O cursor aparece quando passamos o mouse*/
 }
 
