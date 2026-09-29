@@ -11,7 +11,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 .topo{
@@ -59,7 +59,7 @@
 }
 
 .meio h2 {
-    margin-left: 200px;
+    margin-left: 100px;
     color: var(--vermelho);
 }
 
@@ -98,7 +98,7 @@ body {
   font-style: normal;
 }
 
-.ENIAC:hover{
+.ENIAC:hover, .COBOL:hover, .ASSEMBLY:hover, .FORTRAN:hover, .GRACE:hover {
     color: var(--azul);
 }
 
