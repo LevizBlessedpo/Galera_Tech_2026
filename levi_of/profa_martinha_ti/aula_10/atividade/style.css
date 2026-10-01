@@ -4,6 +4,8 @@
     --vermelho-claro: #d83d3d;
     --amarelo-claro: #e1ec44;
     --verde-guerra: #2d7733;
+    --preto-forte: #000000;
+    --branco-pessego: #f0e8e8;
 }
 
 body {
@@ -73,4 +75,12 @@ body {
     border-radius: 20px 30px 40px;
     width: 500px;
     margin-left: 50px;
+}
+
+.plasma-sanguineo h2 {
+    border: 2px solid;
+    background-color: #ffffff;
+    color: var(--preto-forte);
+    border-radius: 20px 30px 40px;
+    text-align: center;
 }
