@@ -62,7 +62,15 @@ body {
     border: 2px solid;
     border-radius: 20px 30px 40px;
     text-align: center;
+    background-image: url(img/fumaca.gif);
 }
+
 .introducao-guerra h1 {
     text-shadow: 5px 5px 3px var(--vermelho-claro);
+}
+
+.encerramento {
+    border-radius: 20px 30px 40px;
+    width: 500px;
+    margin-left: 50px;
 }
