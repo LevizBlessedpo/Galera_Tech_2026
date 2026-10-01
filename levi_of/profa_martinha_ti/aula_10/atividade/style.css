@@ -1,0 +1,68 @@
+:root {
+    --verde-oliva-escuro: #2E3B2E2E;
+    --azul-marinho-fechado: #1A2530;
+    --vermelho-claro: #d83d3d;
+    --amarelo-claro: #e1ec44;
+    --verde-guerra: #2d7733;
+}
+
+body {
+    background-color: var(--azul-marinho-fechado);
+    color: #ffffff;
+}
+
+.rodape {
+    background-color: #ffffff;
+    width: 100%;
+    float: left;
+    text-align: center;
+    line-height: 50px;
+}
+
+.herois-guerra h2 {
+    border: 2px var(--vermelho-claro) solid;
+    background-image: url(img/fogo.gif);
+    border-radius: 10px 20px 30px;
+    text-align: center;
+}
+
+.herois-guerra img {
+    width: 500px;
+    margin-left: 20px;
+    border-radius: 20px 30px 40px;
+}
+
+.computadores-invencao h2 {
+    border: 2px solid;
+    border-radius: 20px 30px 40px;
+    text-align: center;
+    background-image: url(img/hack_comp.webp);
+}
+
+.radar-microondas h2 {
+    border: 2px solid;
+    border-radius: 20px 30px 40px;
+    text-align: center;
+    background-image: url(img/radar.gif);
+}
+
+.col-md {
+    border: 2px var(--amarelo-claro) solid;
+    border-radius: 20px 30px 40px;
+}
+
+.Wi-Fi h2 {
+    border: 2px solid;
+    border-radius: 20px 30px 40px;
+    text-align: center;
+    background-image: url(img/wifi.webp);
+}
+
+.aerossol h2 {
+    border: 2px solid;
+    border-radius: 20px 30px 40px;
+    text-align: center;
+}
+.introducao-guerra h1 {
+    text-shadow: 5px 5px 3px var(--vermelho-claro);
+}
