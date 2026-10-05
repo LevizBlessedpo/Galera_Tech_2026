@@ -2,4 +2,63 @@
     --roxo-neon: #8257e5; /* Cor de cabeçalho */
     --preto-fosco: #1e1e24; /* Fundo das tabelas */
     --grafite-escuro: #121214; /* Fundo Geral */
+    --vermelho-claro: #ff4d6d; /* Cor de borda */
+}
+
+.col-sm-4 p {
+    text-align: justify;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.col-sm-4 h3 {
+    border: 3px #ffffff solid;
+    background-image: url(img/giphy.gif);
+    border-radius: 10px 20px 30px;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px var(--vermelho-claro);
+}
+
+.col-sm-4 {
+    border: 1px solid var(--preto-fosco);
+    border-radius: 10px 20px 30px;
+    position: relative;
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites do elemento */
+    cursor: pointer; /* Especifica qual o ponteiro do mouse será exibido */
+}
+
+.col-sm-4::before {
+    content: "Passe o mouse para revelar os Easter Eggs!"; /* Conteúdo da capa */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#000000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    z-index: 10; /* Aqui garante que a capa fique sobreposta a imagens, gifs e textos! */
+    transition: opacity 0.4s ease, visibility 0.4s ease; /* Transições suaves para a capa */
+}
+
+.col-sm-4:hover::before {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.col-sm-4 img {
+    width: 300px;
+    height: 200px;
+    margin-left: 10px;
+    border-radius: 10px 20px 30px;
+    box-shadow: 5px 5px 3px #000000;
+    margin-bottom: 10px;
+    margin-top: 5px;
 }
