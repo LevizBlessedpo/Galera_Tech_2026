@@ -1,64 +1,274 @@
 :root {
-    --roxo-neon: #8257e5; /* Cor de cabeçalho */
-    --preto-fosco: #1e1e24; /* Fundo das tabelas */
-    --grafite-escuro: #121214; /* Fundo Geral */
-    --vermelho-claro: #ff4d6d; /* Cor de borda */
+    --roxo: #8257e5;
+    --roxo-escuro: #5b21b6;
+    --vermelho: #ff4d6d;
+    --fundo: #0f0f13;
+    --card: #19191f;
+    --card-hover: #22222a;
+    --texto: #f5f5f5;
+    --texto-secundario: #a1a1aa;
 }
 
-.col-sm-4 p {
-    text-align: justify;
+* {
+    box-sizing: border-box;
 }
 
 body {
+    margin: 0;
+    background: var(--fundo);
+    color: var(--texto);
     font-family: "Roboto", sans-serif;
 }
 
-.col-sm-4 h3 {
-    border: 3px #ffffff solid;
-    background-image: url(img/giphy.gif);
-    border-radius: 10px 20px 30px;
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.hero {
+    padding: 90px 20px;
     text-align: center;
-    color: #ffffff;
-    text-shadow: 2px 2px 4px var(--vermelho-claro);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(91, 33, 182, 0.95),
+            rgba(130, 87, 229, 0.75)
+        );
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.col-sm-4 {
-    border: 1px solid var(--preto-fosco);
-    border-radius: 10px 20px 30px;
-    position: relative;
-    overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites do elemento */
-    cursor: pointer; /* Especifica qual o ponteiro do mouse será exibido */
+.hero-tag {
+    display: inline-block;
+
+    padding: 7px 15px;
+    margin-bottom: 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+
+    font-size: 0.85rem;
+    font-weight: 500;
+
+    background: rgba(255, 255, 255, 0.08);
 }
 
-.col-sm-4::before {
-    content: "Passe o mouse para revelar os Easter Eggs!"; /* Conteúdo da capa */
-    position: absolute;
-    top: 0;
-    left: 0;
+.hero h1 {
+    margin-bottom: 20px;
+
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 900;
+
+    letter-spacing: -1px; /* Especifica o espaçamento de caracteres de texto */
+}
+
+.hero p {
+    max-width: 750px;
+    margin: auto;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   DÉCADAS
+========================= */
+
+.decada {
+    padding: 80px 0 20px;
+}
+
+.decada-titulo {
+    margin-bottom: 35px;
+}
+
+.decada-titulo span {
+    color: var(--roxo);
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.decada-titulo h2 {
+    margin: 5px 0 8px;
+
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.decada-titulo p {
+    margin: 0;
+
+    color: var(--texto-secundario);
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.game-card {
+    height: 100%;
+
+    overflow: hidden;
+
+    background: var(--card);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+
+    transition: /* Mudança que acontece quando aproximamos o mouse sobre o card */
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(130, 87, 229, 0.7);
+
+    /* Sombra que aparece nos cards*/
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.45),
+        0 0 25px rgba(130, 87, 229, 0.12);
+}
+
+
+/* =========================
+   IMAGENS
+========================= */
+
+.game-image {
+    height: 220px;
+
+    overflow: hidden;
+}
+
+.game-image img {
     width: 100%;
     height: 100%;
-    background-color:#000000;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.game-card:hover .game-image img {
+    transform: scale(1.06);
+}
+
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+.game-content {
+    padding: 24px;
+}
+
+.game-year {
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    color: var(--roxo);
+
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.game-content h3 {
+    margin-bottom: 14px;
+
     color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 1.1rem;
-    z-index: 10; /* Aqui garante que a capa fique sobreposta a imagens, gifs e textos! */
-    transition: opacity 0.4s ease, visibility 0.4s ease; /* Transições suaves para a capa */
+
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: color 0.2s ease;
 }
 
-.col-sm-4:hover::before {
-    opacity: 0;
-    visibility: hidden;
+.game-content h3:hover {
+    color: var(--roxo);
 }
 
-.col-sm-4 img {
-    width: 300px;
-    height: 200px;
-    margin-left: 10px;
-    border-radius: 10px 20px 30px;
-    box-shadow: 5px 5px 3px #000000;
-    margin-bottom: 10px;
-    margin-top: 5px;
+.game-content p {
+    margin-bottom: 20px;
+
+    color: var(--texto-secundario);
+
+    line-height: 1.7;
+
+    text-align: left;
+}
+
+.game-genre {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 6px;
+
+    background: rgba(130, 87, 229, 0.12);
+
+    color: #bda8ff;
+
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    margin-top: 80px;
+    padding: 30px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    text-align: center;
+
+    color: var(--texto-secundario);
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 65px 20px;
+    }
+
+    .decada {
+        padding-top: 55px;
+    }
+
+    .decada-titulo h2 {
+        font-size: 2rem;
+    }
+
+    .game-image {
+        height: 240px;
+    }
 }
