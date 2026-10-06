@@ -7,6 +7,7 @@
     --card-hover: #22222a;
     --texto: #f5f5f5;
     --texto-secundario: #a1a1aa;
+    --purpurina: #a570ac;
 }
 
 * {
@@ -15,11 +16,16 @@
 
 body {
     margin: 0;
-    background: var(--fundo);
+    background: linear-gradient(
+        150deg,
+        #000000 45%,
+        var(--roxo-escuro) 65%,
+        var(--purpurina) 100%
+    );
+
     color: var(--texto);
     font-family: "Roboto", sans-serif;
 }
-
 
 /* =========================
    CABEÇALHO
@@ -244,9 +250,12 @@ footer {
 
     text-align: center;
 
-    color: var(--texto-secundario);
+    color: #ffffffff;
 
     font-size: 0.9rem;
+
+    background-color: var(--roxo);
+
 }
 
 
